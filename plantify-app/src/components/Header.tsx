@@ -1,7 +1,30 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/Plantify+LOGO+corte.png'
+import { FC } from 'react'
+import { logout } from '../store/user/userSlice'
+import { toast } from 'react-toastify'
+import { useAppDispatch } from '../store/hooks'
+import { useAuth } from '../hooks/useAuth'
+import { removeTokenFromLocalStorage } from '../helpers/localStorage.helper'
 
-function Header() {
+const Header: FC = () => {
+	const isAuth = useAuth()
+	const dispatch = useAppDispatch()
+	const navigate = useNavigate()
+
+	const handleLoginClick = () => {
+		navigate('/auth?mode=login')
+	}
+
+	const handleSignInClick = () => {
+		navigate('/auth?mode=register')
+	}
+	const logoutHandler = () => {
+		dispatch(logout())
+		removeTokenFromLocalStorage('token')
+		toast.success('You have successfully logged out')
+		navigate('/')
+	}
 	return (
 		<header className="bg-white border-b-2 border-gray-200 p-4">
 			<div className=" flex items-center container mx-auto max-w-7xl">
@@ -41,21 +64,28 @@ function Header() {
 					</ul>
 				</nav>
 
-				{/* Buttons */}
-				<div className="flex space-x-4 ml-6">
-					<Link
-						to="/signup"
-						className="bg-green-700 text-white py-2 px-4 rounded hover:bg-orange-500"
-					>
-						Cadastre-se
-					</Link>
-					<Link
-						to="/login"
-						className="border border-green-700 text-green-700 py-2 px-4 rounded hover:bg-orange-500 hover:text-white hover:border-transparent"
-					>
-						Login
-					</Link>
-				</div>
+				{/* Actions */}
+				{isAuth ? (
+					<button className="btn btn-red" onClick={logoutHandler}>
+						<span>Log Out</span>
+					</button>
+				) : (
+					/* Buttons */
+					<div className="flex space-x-4 ml-6">
+						<button
+							className="bg-green-700 text-white py-2 px-4 rounded hover:bg-orange-500"
+							onClick={handleSignInClick}
+						>
+							Cadastre-se
+						</button>
+						<button
+							className="border border-green-700 text-green-700 py-2 px-4 rounded hover:bg-orange-500 hover:text-white hover:border-transparent"
+							onClick={handleLoginClick}
+						>
+							Login
+						</button>
+					</div>
+				)}
 			</div>
 		</header>
 	)

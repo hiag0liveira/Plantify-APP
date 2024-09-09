@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import img from '../assets/protected-icon.png'
+import { useAuth } from '../hooks/useAuth'
 
 interface Props {
 	children: JSX.Element
 }
 
 export const ProtectedRoute: FC<Props> = ({ children }) => {
-	const isAuth = false
+	const isAuth = useAuth()
 	return (
 		<>
 			{isAuth ? (
