@@ -1,7 +1,7 @@
 import { IResponseUserData, IUser, IUserData } from "../types/types";
 
 export const AuthService = {
-    async registration(userData: IUserData): Promise<IResponseUserData | undefined> {
+    async registration(): Promise<IResponseUserData | undefined> {
         return {
             token: "mocked-jwt-token",
             user: {
@@ -14,7 +14,7 @@ export const AuthService = {
         };
     },
 
-    async login(userData: IUserData): Promise<IUser | undefined> {
+    async login(): Promise<IUser | undefined> {
         return {
             email: "teste@email.com",
             token: "mocked-jwt-token",
