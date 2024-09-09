@@ -23,7 +23,7 @@ const Auth: FC = () => {
 	const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
 		try {
 			e.preventDefault()
-			const data = await AuthService.login({ email, password })
+			const data = await AuthService.login()
 			if (data) {
 				setTokenToLocalStorage('token', data.token)
 				dispatch(login(data))
@@ -39,7 +39,7 @@ const Auth: FC = () => {
 	const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
 		try {
 			e.preventDefault()
-			const data = await AuthService.registration({ email, password })
+			const data = await AuthService.registration()
 			if (data) {
 				toast.success('Account has been created.')
 				setIsLogin(!isLogin)

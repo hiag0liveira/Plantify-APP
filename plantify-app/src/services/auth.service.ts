@@ -1,4 +1,4 @@
-import { IResponseUserData, IUser, IUserData } from "../types/types";
+import { IResponseUserData, IUser } from "../types/types";
 
 export const AuthService = {
     async registration(): Promise<IResponseUserData | undefined> {
