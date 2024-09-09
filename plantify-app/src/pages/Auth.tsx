@@ -64,12 +64,14 @@ const Auth: FC = () => {
 					type="text"
 					className="input"
 					placeholder="Email"
+					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<input
 					type="password"
 					className="input"
 					placeholder="Password"
+					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 				<button className="btn btn-green mx-auto">Submit</button>
