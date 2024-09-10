@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import logo from '../assets/Plantify+LOGO+corte.png'
+import logo from '../assets/logos/Plantify+LOGO+corte.png'
 import { FC } from 'react'
 import { logout } from '../store/user/userSlice'
 import { toast } from 'react-toastify'
