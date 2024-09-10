@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { RiDoubleQuotesL } from 'react-icons/ri'
 
 const testimonials = [
 	{
