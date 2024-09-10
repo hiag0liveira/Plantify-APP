@@ -3,6 +3,8 @@ import imagem1 from '../assets/home/fundoprincipalhome.png'
 import { GrPersonalComputer } from 'react-icons/gr'
 import { AiOutlineClockCircle, AiOutlinePlusCircle } from 'react-icons/ai'
 import { BsChatDots } from 'react-icons/bs'
+import TestimonialSlider from '../components/TestimonialSlider'
+import { RiDoubleQuotesL } from 'react-icons/ri'
 
 const Home: FC = () => {
 	return (
@@ -92,6 +94,10 @@ const Home: FC = () => {
 							climáticas.
 						</p>
 					</div>
+				</div>
+				<div className="flex mt-20 mb-16">
+					<RiDoubleQuotesL size={160} className="text-orange-400 ml-40" />
+					<TestimonialSlider />
 				</div>
 			</div>
 
