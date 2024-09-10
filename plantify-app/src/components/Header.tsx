@@ -73,13 +73,13 @@ const Header: FC = () => {
 					/* Buttons */
 					<div className="flex space-x-4 ml-6">
 						<button
-							className="bg-green-700 text-white py-2 px-4 rounded hover:bg-orange-500"
+							className="bg-green-700 text-white py-2 px-4 rounded-md hover:bg-orange-500"
 							onClick={handleSignInClick}
 						>
 							Cadastre-se
 						</button>
 						<button
-							className="border border-green-700 text-green-700 py-2 px-4 rounded hover:bg-orange-500 hover:text-white hover:border-transparent"
+							className="border border-green-700 text-green-700 py-2 px-4 rounded-md hover:bg-orange-500 hover:text-white hover:border-transparent"
 							onClick={handleLoginClick}
 						>
 							Login

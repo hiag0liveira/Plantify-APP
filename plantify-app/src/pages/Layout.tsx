@@ -7,7 +7,7 @@ const Layout: FC = () => {
 	return (
 		<div className="min-h-screen bg-white pb-20 font-roboto">
 			<Header />
-			<div className="container">
+			<div className="w-full">
 				<Outlet />
 			</div>
 			<Footer />
