@@ -1,5 +1,7 @@
 import { FC } from 'react'
 import imagem1 from '../assets/home/fundoprincipalhome.png'
+import imagem2 from '../assets/home/chamadaplantifymais72ppi.png'
+import logoWhitePlus from '../assets/logos/Plantify+ LOGO white.svg'
 import { GrPersonalComputer } from 'react-icons/gr'
 import { AiOutlineClockCircle, AiOutlinePlusCircle } from 'react-icons/ai'
 import { BsChatDots } from 'react-icons/bs'
@@ -95,15 +97,68 @@ const Home: FC = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex mt-20 mb-16">
+				<div className="flex mt-20">
 					<RiDoubleQuotesL size={160} className="text-orange-400 ml-40" />
 					<TestimonialSlider />
 				</div>
 			</div>
 
-			<div>
-				<h1>sec3</h1>
+			<div
+				className="relative w-full h-[400px] bg-cover bg-center bg-no-repeat flex items-center"
+				style={{
+					backgroundImage: `url(${imagem2})`,
+				}}
+			>
+				<div className="w-full h-full flex flex-col justify-center items-center px-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center w-full max-w-7xl">
+						<div></div>
+						<div className="flex flex-col items-start space-y-6">
+							<div>
+								<img
+									src={logoWhitePlus}
+									alt="Plantify Logo"
+									style={{ width: '440px', height: 'auto' }}
+								/>
+							</div>
+						</div>
+						<div></div>
+						<div className="grid grid-cols-2 ">
+							<div className="flex items-center space-x-4">
+								<div className="w-1 h-1 rounded-full bg-white"></div>
+								<h3 className="text-xl text-white">Gestão de Lavoura</h3>
+							</div>
+
+							{/* Assistente Virtual */}
+							<div className="flex items-center space-x-4">
+								<div className="w-1 h-1 rounded-full bg-white"></div>
+								<h3 className="text-xl text-white">Assistente Virtual</h3>
+							</div>
+
+							{/* Clube de Benefícios */}
+							<div className="flex items-center space-x-4">
+								<div className="w-1 h-1 rounded-full bg-white"></div>
+								<h3 className="text-xl text-white">Clube de Benefícios</h3>
+							</div>
+
+							{/* Consultorias */}
+							<div className="flex items-center space-x-4">
+								<div className="w-1 h-1 rounded-full bg-white"></div>
+								<h3 className="text-xl  text-white">Consultorias</h3>
+							</div>
+							<span className="mt-3 text-xl font-semibold italic text-white">
+								E muito mais!
+							</span>
+						</div>
+						<div></div>
+						<div className="flex flex-col items-start ">
+							<button className=" px-4 py-1 ml-44 bg-orange-500 text-white text-lg rounded-md hover:bg-orange-600 transition duration-300">
+								Seja Plantify+
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
+
 			<div>
 				<h1>sec4</h1>
 			</div>

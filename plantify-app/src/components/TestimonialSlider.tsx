@@ -42,6 +42,7 @@ const TestimonialSlider = () => {
 			className={`transition-opacity max-w-2xl mt-20 duration-500 ease-in-out ${
 				fade ? 'opacity-100' : 'opacity-0'
 			}`}
+			style={{ minHeight: '140px' }} // Define uma altura mínima
 		>
 			{/* Texto ao lado das aspas */}
 			<p className="text-2xl font-roboto text-gray-800 mb-4">
