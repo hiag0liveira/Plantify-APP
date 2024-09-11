@@ -24,7 +24,7 @@ const Home: FC = () => {
 	return (
 		<div>
 			<div
-				className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
+				className="relative w-full h-[70vh] bg-cover bg-center bg-no-repeat"
 				style={{
 					backgroundImage: `url(${imagem1})`,
 				}}
@@ -176,53 +176,53 @@ const Home: FC = () => {
 				</div>
 			</div>
 
-			<div className="text-center mt-12 max-w-4xl mx-auto" ref={resultsRef}>
+			<div className="text-center mt-12 max-w-6xl mx-auto" ref={resultsRef}>
 				<h2 className="text-3xl font-bold text-green-700 mb-8">
 					Nossos resultados
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-24">
-					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55 h-40">
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center">
 						<h3
-							className={`text-6xl text-green-700 ${
+							className={`text-8xl text-green-700 ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
 							+500
 						</h3>
 						<p
-							className={`text-green-700 text-xl ${
+							className={`text-green-700 text-2xl ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
 							mil hectares
 						</p>
 					</div>
-					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center">
 						<h3
-							className={`text-6xl text-green-700 ${
+							className={`text-8xl text-green-700 ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
 							+200
 						</h3>
 						<p
-							className={`text-green-700 text-xl ${
+							className={`text-green-700 text-2xl ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
 							fazendas
 						</p>
 					</div>
-					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-10 text-center">
 						<h3
-							className={`text-6xl text-green-700 ${
+							className={`text-8xl text-green-700 ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
 							+100
 						</h3>
 						<p
-							className={`text-green-700 text-xl ${
+							className={`text-green-700 text-2xl ${
 								resultsVisible ? 'animate-rise' : ''
 							}`}
 						>
