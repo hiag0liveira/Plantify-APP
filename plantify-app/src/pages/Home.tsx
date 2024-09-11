@@ -8,8 +8,19 @@ import { BsChatDots } from 'react-icons/bs'
 import TestimonialSlider from '../components/TestimonialSlider'
 import { RiDoubleQuotesL } from 'react-icons/ri'
 import BlogPosts from '../components/BlogPosts'
+import { useInView } from 'react-intersection-observer'
+import './animation.css'
 
 const Home: FC = () => {
+	const { ref: advantagesRef, inView: advantagesVisible } = useInView({
+		triggerOnce: true,
+		threshold: 0.1, // Animação acontece quando 10% do elemento está visível
+	})
+	const { ref: resultsRef, inView: resultsVisible } = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	})
+
 	return (
 		<div>
 			<div
@@ -40,7 +51,12 @@ const Home: FC = () => {
 				<h2 className="text-4xl font-bold text-green-600 mb-8">
 					Vantagens de ser Plantify
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-3 px-8">
+				<div
+					className={`grid grid-cols-1 md:grid-cols-4 gap-3 px-8 ${
+						advantagesVisible ? 'animate-rise' : ''
+					}`}
+					ref={advantagesRef}
+				>
 					<div className="flex flex-col items-center">
 						<GrPersonalComputer
 							size={120}
@@ -160,22 +176,58 @@ const Home: FC = () => {
 				</div>
 			</div>
 
-			<div className="text-center mt-12 max-w-4xl mx-auto ">
+			<div className="text-center mt-12 max-w-4xl mx-auto" ref={resultsRef}>
 				<h2 className="text-3xl font-bold text-green-700 mb-8">
 					Nossos resultados
 				</h2>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-24">
 					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55 h-40">
-						<h3 className="text-6xl text-green-700">+500</h3>
-						<p className="text-green-700 text-xl">mil hectares</p>
+						<h3
+							className={`text-6xl text-green-700 ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							+500
+						</h3>
+						<p
+							className={`text-green-700 text-xl ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							mil hectares
+						</p>
 					</div>
 					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
-						<h3 className="text-6xl text-green-700">+200</h3>
-						<p className="text-green-700 text-xl">fazendas</p>
+						<h3
+							className={`text-6xl text-green-700 ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							+200
+						</h3>
+						<p
+							className={`text-green-700 text-xl ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							fazendas
+						</p>
 					</div>
 					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
-						<h3 className="text-6xl text-green-700">+100</h3>
-						<p className="text-green-700 text-xl">usuários</p>
+						<h3
+							className={`text-6xl text-green-700 ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							+100
+						</h3>
+						<p
+							className={`text-green-700 text-xl ${
+								resultsVisible ? 'animate-rise' : ''
+							}`}
+						>
+							usuários
+						</p>
 					</div>
 				</div>
 				<button className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white text-xl font-bold py-3 px-8 rounded mt-8">

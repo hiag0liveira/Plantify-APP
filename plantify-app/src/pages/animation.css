@@ -1,0 +1,15 @@
+@keyframes rise {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-rise {
+    animation: rise 2.0s ease-out forwards;
+}
