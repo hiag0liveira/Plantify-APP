@@ -10,7 +10,7 @@ const Home: FC = () => {
 	return (
 		<div>
 			<div
-				className="relative w-screen h-screen bg-cover bg-center"
+				className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
 				style={{
 					backgroundImage: `url(${imagem1})`,
 				}}
