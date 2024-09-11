@@ -7,6 +7,7 @@ import { AiOutlineClockCircle, AiOutlinePlusCircle } from 'react-icons/ai'
 import { BsChatDots } from 'react-icons/bs'
 import TestimonialSlider from '../components/TestimonialSlider'
 import { RiDoubleQuotesL } from 'react-icons/ri'
+import BlogPosts from '../components/BlogPosts'
 
 const Home: FC = () => {
 	return (
@@ -177,16 +178,13 @@ const Home: FC = () => {
 						<p className="text-green-700 text-xl">usuários</p>
 					</div>
 				</div>
-				<button className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white font-bold py-2 px-4 rounded mt-8">
+				<button className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white text-xl font-bold py-3 px-8 rounded mt-8">
 					Seja um parceiro Plantify
 				</button>
 			</div>
 
-			<div>
-				<h1>sec5</h1>
-			</div>
-			<div>
-				<h1>sec6</h1>
+			<div className="mt-24 mb-24">
+				<BlogPosts />
 			</div>
 		</div>
 	)

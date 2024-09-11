@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FC } from 'react'
 
 const testimonials = [
 	{
@@ -18,7 +18,7 @@ const testimonials = [
 	},
 ]
 
-const TestimonialSlider = () => {
+const TestimonialSlider: FC = () => {
 	const [currentTestimonial, setCurrentTestimonial] = useState(0)
 	const [fade, setFade] = useState(true)
 
