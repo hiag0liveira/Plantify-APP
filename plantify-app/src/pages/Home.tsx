@@ -159,9 +159,29 @@ const Home: FC = () => {
 				</div>
 			</div>
 
-			<div>
-				<h1>sec4</h1>
+			<div className="text-center mt-12 max-w-4xl mx-auto ">
+				<h2 className="text-3xl font-bold text-green-700 mb-8">
+					Nossos resultados
+				</h2>
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-24">
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55 h-40">
+						<h3 className="text-6xl text-green-700">+500</h3>
+						<p className="text-green-700 text-xl">mil hectares</p>
+					</div>
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
+						<h3 className="text-6xl text-green-700">+200</h3>
+						<p className="text-green-700 text-xl">fazendas</p>
+					</div>
+					<div className="flex flex-col items-center justify-center bg-white border border-green-600 rounded-md p-4 text-center w-55">
+						<h3 className="text-6xl text-green-700">+100</h3>
+						<p className="text-green-700 text-xl">usuários</p>
+					</div>
+				</div>
+				<button className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white font-bold py-2 px-4 rounded mt-8">
+					Seja um parceiro Plantify
+				</button>
 			</div>
+
 			<div>
 				<h1>sec5</h1>
 			</div>
