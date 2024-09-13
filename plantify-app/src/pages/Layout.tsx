@@ -5,12 +5,12 @@ import Footer from '../components/Footer'
 
 const Layout: FC = () => {
 	return (
-		<div className="min-h-screen bg-white pb-20 font-roboto">
+		<div className="min-h-screen bg-white pb-19 font-roboto">
 			<Header />
 			<div className="w-full">
 				<Outlet />
 			</div>
-			<Footer />
+			<Footer />	
 		</div>
 	)
 }

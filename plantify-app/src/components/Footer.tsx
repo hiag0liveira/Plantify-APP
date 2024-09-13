@@ -6,7 +6,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 
 const Footer: FC = () => {
 	return (
-		<footer className="bg-green-700 text-white py-6">
+		<footer className="bg-green-700 text-white py-6 mb-0">
 			<div className="container mx-auto flex justify-between items-start max-w-7xl">
 				{/* Seção de informações */}
 				<div className="text-left mb-5">
