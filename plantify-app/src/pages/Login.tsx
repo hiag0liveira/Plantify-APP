@@ -45,12 +45,12 @@ function LoginPage() {
     >
       {/* Coluna da esquerda (Logo P centralizado) */}
       <div className="hidden md:flex justify-center items-center">
-        <img src={plantifyLogoP} alt="Logo" className="w-64" />
+        <img src={plantifyLogoP} alt="Logo" className="w-80" />
       </div>
 
       {/* Coluna da direita (Formulário centralizado) */}
       <div className="flex justify-center items-center px-4 py-6">
-        <div className="bg-white bg-opacity-70 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <div className="bg-white bg-opacity-70 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-xl">
           <h1 className="text-2xl md:text-4xl font-bold text-green-700 text-center mb-6">
             <img src={platifyLogo} alt="Logo" className="w-48 md:w-64" />
           </h1>
@@ -58,7 +58,7 @@ function LoginPage() {
             {/* E-mail input */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                E-mail
+                <b>E-mail</b> 
               </label>
               <input
                 type="email"
@@ -73,7 +73,7 @@ function LoginPage() {
             {/* Senha input */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
-                Senha
+                <b>Senha</b> 
               </label>
               <input
                 type="password"
