@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import fundoLogin from '../assets/login/fundologin.png';
 import platifyLogo from '../assets/logos/Plantify LOGO corte-svg.svg';
 import plantifyLogoP from '../assets/logos/Plantify SIMBOLO copy-svg.svg';
