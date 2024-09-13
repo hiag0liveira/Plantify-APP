@@ -8,22 +8,43 @@ function LoginPage() {
   // Estado para armazenar e-mail e senha
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [senhaError, setSenhaError] = useState('');
 
   // Função que é chamada ao submeter o formulário
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // Verifica se o e-mail e senha não estão vazios
-    if (email === '' || senha === '') {
-      alert('Por favor, preencha todos os campos.');
-      return;
+    let hasError = false;
+
+    // Verifica se o e-mail está vazio
+    if (email === '') {
+      setEmailError('O e-mail é obrigatório.');
+      hasError = true;
+    } else {
+      setEmailError('');
     }
+
+    // Verifica se a senha está vazia
+    if (senha === '') {
+      setSenhaError('A senha é obrigatória.');
+      hasError = true;
+    } else {
+      setSenhaError('');
+    }
+
+    // Se houver erro, não continua
+    if (hasError) return;
     // Aqui você pode adicionar a lógica de autenticação ou envio do formulário
     console.log('E-mail:', email);
     console.log('Senha:', senha);
 
-    // Limpar os campos após o envio
+    // Limpa os campos de input após o envio
     setEmail('');
     setSenha('');
+
+    // Limpa as mensagens de erro após o envio
+    setEmailError('');
+    setSenhaError('');
   };
 
   return (
@@ -38,7 +59,7 @@ function LoginPage() {
 
       {/* Coluna da direita (Formulário centralizado) */}
       <div className="flex justify-center items-center">
-        <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg" style={{ width: '420px', height: '450px' }}>
+        <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg" style={{ width: '420px' }}>
           <h1 className="text-4xl font-bold text-green-700 text-center mb-6">
             <img src={platifyLogo} alt="Logo" className="w-64" />
           </h1>
@@ -54,7 +75,8 @@ function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
                 placeholder="Informe seu e-mail"
-              />
+                />
+                {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
             </div>
 
             {/* Senha input */}
@@ -69,6 +91,7 @@ function LoginPage() {
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
                 placeholder="Informe sua senha"
               />
+              {senhaError && <p className="text-red-500 text-sm mt-1">{senhaError}</p>}
             </div>
 
             {/* Esqueceu a senha */}
