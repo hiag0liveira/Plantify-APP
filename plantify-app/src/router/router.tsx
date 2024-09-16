@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Layout from '../pages/Layout'
 import Auth from '../pages/Auth'
 import LoginPage from '../pages/Login'
+import SignIn from '../pages/SignIn'
 
 export const router = createBrowserRouter([
 	{
@@ -24,6 +25,21 @@ export const router = createBrowserRouter([
 	{
 		path: '/login',
 		element: <LoginPage />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: 'auth',
+				element: <Auth />,
+			},
+		],
+	},
+	{
+		path: '/signin',
+		element: <SignIn />,
 		errorElement: <ErrorPage />,
 		children: [
 			{

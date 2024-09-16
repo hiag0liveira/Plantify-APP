@@ -2,12 +2,19 @@ import { useState } from 'react';
 import fundoLogin from '../assets/login/fundologin.png';
 import platifyLogo from '../assets/logos/Plantify LOGO corte-svg.svg';
 import plantifyLogoP from '../assets/logos/Plantify SIMBOLO copy-svg.svg';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [emailError, setEmailError] = useState('');
   const [senhaError, setSenhaError] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/signin')
+  }
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -103,6 +110,7 @@ function LoginPage() {
             </div>
             <div className="text-center mt-4">
               <button
+                onClick={handleClick}
                 className="w-full bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
               >
                 Cadastre-se
