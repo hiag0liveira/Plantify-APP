@@ -110,8 +110,8 @@ const Home: FC = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex mt-20">
-					<RiDoubleQuotesL size={160} className="text-orange-400 ml-40" />
+				<div className="flex mt-20 justify-center">
+					<RiDoubleQuotesL size={160} className="text-orange-400" />
 					<TestimonialSlider />
 				</div>
 			</div>
