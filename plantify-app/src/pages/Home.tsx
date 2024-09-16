@@ -43,7 +43,7 @@ const Home: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="text-center py-14 max-w-7xl  mx-auto ">
+			<div className="text-center py-14 max-w-7xl mx-auto ">
 				<h2 className="text-4xl font-bold text-green-600 mb-8">
 					Vantagens de ser Plantify
 				</h2>

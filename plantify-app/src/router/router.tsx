@@ -5,6 +5,7 @@ import Layout from '../pages/Layout'
 import Auth from '../pages/Auth'
 import LoginPage from '../pages/Login'
 import SignIn from '../pages/SignIn'
+import Plus from '../pages/Plus'
 
 export const router = createBrowserRouter([
 	{
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'signin',
 				element: <SignIn />,
+			},
+			{
+				path: 'plus',
+				element: <Plus />,
 			},
 		],
 	},

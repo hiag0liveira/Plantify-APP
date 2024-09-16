@@ -54,10 +54,7 @@ const Header: FC = () => {
 							</Link>
 						</li>
 						<li>
-							<Link
-								to="/plantify-plus"
-								className="text-green-700 hover:text-orange-500"
-							>
+							<Link to="/plus" className="text-green-700 hover:text-orange-500">
 								Plantify+
 							</Link>
 						</li>
