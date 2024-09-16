@@ -3,6 +3,8 @@ import ErrorPage from '../pages/ErrorPage'
 import Home from '../pages/Home'
 import Layout from '../pages/Layout'
 import Auth from '../pages/Auth'
+import LoginPage from '../pages/Login'
+import SignIn from '../pages/SignIn'
 
 export const router = createBrowserRouter([
 	{
@@ -17,6 +19,14 @@ export const router = createBrowserRouter([
 			{
 				path: 'auth',
 				element: <Auth />,
+			},
+			{
+				path: 'login',
+				element: <LoginPage />,
+			},
+			{
+				path: 'signin',
+				element: <SignIn />,
 			},
 		],
 	},

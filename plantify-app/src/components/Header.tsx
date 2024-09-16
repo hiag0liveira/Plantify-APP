@@ -13,11 +13,11 @@ const Header: FC = () => {
 	const navigate = useNavigate()
 
 	const handleLoginClick = () => {
-		navigate('/auth?mode=login')
+		navigate('login')
 	}
 
 	const handleSignInClick = () => {
-		navigate('/auth?mode=register')
+		navigate('signin')
 	}
 	const logoutHandler = () => {
 		dispatch(logout())
