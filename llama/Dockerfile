@@ -1,12 +1,11 @@
-# Base image for Ollama
-FROM ollama/ollama:latest
+# Use a imagem base do Ollama
+FROM ollama/ollama
 
-# Set environment variables (optional)
-ENV OLLAMA_HOME=/root/.ollama
-WORKDIR /root
-
-# Expose the port for the web interface
+# Exponha a porta 11434 para o servidor
 EXPOSE 11434
 
-# Run the entrypoint to ensure the application runs on start
-ENTRYPOINT ["ollama"]
+# Crie o volume persistente para os dados do Ollama
+VOLUME /root/.ollama
+
+# Execute o Ollama ao iniciar o contêiner
+CMD ["ollama", "serve"]
