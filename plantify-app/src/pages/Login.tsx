@@ -3,17 +3,38 @@ import fundoLogin from '../assets/login/fundologin.png'
 import platifyLogo from '../assets/logos/Plantify LOGO corte-svg.svg'
 import plantifyLogoP from '../assets/logos/Plantify SIMBOLO copy-svg.svg'
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '../store/hooks'
+import { AuthService } from '../services/auth.service'
+import { setTokenToLocalStorage } from '../helpers/localStorage.helper'
+import { login } from '../store/user/userSlice'
+import { toast } from 'react-toastify'
 
 function LoginPage() {
 	const [email, setEmail] = useState('')
 	const [senha, setSenha] = useState('')
 	const [emailError, setEmailError] = useState('')
 	const [senhaError, setSenhaError] = useState('')
-
+	const dispatch = useAppDispatch()
 	const navigate = useNavigate()
 
 	const handleClick = () => {
 		navigate('/signin')
+	}
+
+	const loginHandler = async () => {
+		try {
+			const data = await AuthService.login()
+			if (data) {
+				setTokenToLocalStorage('token', data.token)
+				dispatch(login(data))
+				toast.success('You logged id.')
+				navigate('/')
+				window.location.reload()
+			}
+		} catch (err: any) {
+			const error = err.response?.data.message
+			toast.error(error.toString())
+		}
 	}
 
 	const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -22,6 +43,7 @@ function LoginPage() {
 
 		if (email === '') {
 			setEmailError('O e-mail é obrigatório.')
+			toast.error('O e-mail é obrigatório.')
 			hasError = true
 		} else {
 			setEmailError('')
@@ -29,20 +51,15 @@ function LoginPage() {
 
 		if (senha === '') {
 			setSenhaError('A senha é obrigatória.')
+			toast.error('A senha é obrigatória.')
 			hasError = true
 		} else {
 			setSenhaError('')
 		}
 
-		if (hasError) return
-
-		console.log('E-mail:', email)
-		console.log('Senha:', senha)
-
-		setEmail('')
-		setSenha('')
-		setEmailError('')
-		setSenhaError('')
+		if (!hasError) {
+			loginHandler()
+		}
 	}
 
 	return (
@@ -119,7 +136,7 @@ function LoginPage() {
 						<div className="text-center mt-4">
 							<button
 								onClick={handleClick}
-								className="w-full bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50"
+								className="w-full bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 "
 							>
 								Cadastre-se
 							</button>

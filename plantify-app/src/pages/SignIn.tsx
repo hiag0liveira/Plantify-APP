@@ -2,6 +2,9 @@ import { useState } from 'react'
 import fundoLogin from '../assets/login/fundologin.png'
 import platifyLogo from '../assets/logos/Plantify LOGO corte-svg.svg'
 import plantifyLogoP from '../assets/logos/Plantify SIMBOLO copy-svg.svg'
+import { AuthService } from '../services/auth.service'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 function SignIn() {
 	const [nome, setNome] = useState('')
@@ -10,11 +13,35 @@ function SignIn() {
 	const [confirmEmail, setConfirmEmail] = useState('')
 	const [senha, setSenha] = useState('')
 	const [confirmSenha, setConfirmSenha] = useState('')
+	const navigate = useNavigate()
 
-	const handleSubmit = (e: { preventDefault: () => void }) => {
-		e.preventDefault()
+	const registrationHandler = async () => {
+		try {
+			const data = await AuthService.registration()
+			if (data) {
+				toast.success('Conta criada com sucesso!.')
+				navigate('/login')
+			}
+		} catch (err: any) {
+			const error = err.response?.data.message
+			toast.error(error.toString())
+		}
 	}
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
 
+		if (email !== confirmEmail) {
+			toast.error('Os e-mails não coincidem.')
+			return
+		}
+
+		if (senha !== confirmSenha) {
+			toast.error('As senhas não coincidem.')
+			return
+		}
+
+		registrationHandler()
+	}
 	return (
 		<div
 			className="relative w-full h-screen grid grid-cols-1 md:grid-cols-2"
@@ -120,7 +147,7 @@ function SignIn() {
 
 						{/* Botões */}
 						<div className="text-center mt-4">
-							<button className="w-full bg-gray-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
+							<button className="w-full bg-gray-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 hover:bg-orange-500">
 								Criar Conta
 							</button>
 						</div>
