@@ -1,31 +1,41 @@
-import { FC } from 'react';
-import fundoPlantify from '../assets/plantify+/plantação de feijão.jpg';
-import chico from '../assets/plantify+/chico.svg';
-import imgFundoChico from '../assets/plantify+/imgfundochico.png';
-import researching from '../assets/plantify+/person-researching-market-trends-computer-taking-notes 1.png';
-import plantifyLogo from '../assets/logos/Plantify+ LOGO white.svg';
-import { PiFarm } from 'react-icons/pi';
-import { AiOutlineShopping } from 'react-icons/ai';
-import { FaChalkboardTeacher } from 'react-icons/fa';
+import { FC } from 'react'
+import fundoPlantify from '../assets/plantify+/plantação de feijão.jpg'
+import chico from '../assets/plantify+/chico.svg'
+import imgFundoChico from '../assets/plantify+/imgfundochico.png'
+import researching from '../assets/plantify+/person-researching-market-trends-computer-taking-notes 1.png'
+import plantifyLogo from '../assets/logos/Plantify+ LOGO white.svg'
+import { PiFarm } from 'react-icons/pi'
+import { AiOutlineShopping } from 'react-icons/ai'
+import { FaChalkboardTeacher } from 'react-icons/fa'
 
 const Plus: FC = () => {
 	return (
-		<>
+		<div>
 			{/* Seção do fundo principal */}
-			<div className="relative w-full h-[100vh] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${fundoPlantify})` }}>
-				<div className="absolute inset-0 bg-black opacity-40 z-10"></div>
-
+			<div
+				className="relative w-full h-[100vh] bg-cover bg-center bg-no-repeat"
+				style={{ backgroundImage: `url(${fundoPlantify})` }}
+			>
+				<div className="absolute inset-0 bg-black opacity-40 z-11"></div>
 				<div className="relative flex flex-col justify-center items-center h-full z-20">
 					<div className="flex justify-center items-center mb-4">
-						<img src={plantifyLogo} alt="Logo" className="w-auto max-w-xs md:max-w-md lg:max-w-lg filter brightness-100" />
+						<img
+							src={plantifyLogo}
+							alt="Logo"
+							className="w-auto max-w-xs md:max-w-md lg:max-w-lg filter brightness-100"
+						/>
 					</div>
 
 					<div className="text-center px-4 md:px-16">
 						<h4 className="text-white text-base md:text-lg lg:text-xl font-light leading-tight">
-							<b>O Plantify+ foi pensado para facilitar sua vida no campo</b>,<br />
-							<b>aumentar sua produtividade e tornar sua operação</b><br />
-							<b>agrícola mais lucrativa. Com essas ferramentas e suporte,</b><br />
-							<b>você terá tudo o que precisa para cuidar da sua lavoura</b><br />
+							<b>O Plantify+ foi pensado para facilitar sua vida no campo</b>,
+							<br />
+							<b>aumentar sua produtividade e tornar sua operação</b>
+							<br />
+							<b>agrícola mais lucrativa. Com essas ferramentas e suporte,</b>
+							<br />
+							<b>você terá tudo o que precisa para cuidar da sua lavoura</b>
+							<br />
 							<b>com mais segurança e eficiência.</b>
 						</h4>
 					</div>
@@ -46,9 +56,16 @@ const Plus: FC = () => {
 						<div className="flex justify-center items-center mb-4">
 							<PiFarm className="w-16 h-16 text-green-500" />
 						</div>
-						<h3 className="text-green-700 text-lg font-semibold mb-2">Gestão de Lavoura</h3>
+						<h3 className="text-green-700 text-lg font-semibold mb-2">
+							Gestão de Lavoura
+						</h3>
 						<p className="text-gray-600">
-							<b>Tenha um acompanhamento ainda <br /> mais detalhado de cada etapa do <br /> cultivo, como o momento certo de <br /> irrigar, adubar e colher, garantindo <br /> uma colheita saudável e produtiva.</b>
+							<b>
+								Tenha um acompanhamento ainda <br /> mais detalhado de cada
+								etapa do <br /> cultivo, como o momento certo de <br /> irrigar,
+								adubar e colher, garantindo <br /> uma colheita saudável e
+								produtiva.
+							</b>
 						</p>
 					</div>
 
@@ -56,9 +73,16 @@ const Plus: FC = () => {
 						<div className="flex justify-center items-center mb-4">
 							<AiOutlineShopping className="w-16 h-16 text-green-500" />
 						</div>
-						<h3 className="text-green-700 text-lg font-semibold mb-2">Clube de Benefícios</h3>
+						<h3 className="text-green-700 text-lg font-semibold mb-2">
+							Clube de Benefícios
+						</h3>
 						<p className="text-gray-600">
-							<b>Faça parte do nosso clube exclusivo <br /> que oferece vários descontos e muita <br /> facilidade. Além disso, você pode <br /> ganhar brindes especiais e ainda se <br /> cadastrar como um vendedor na <br /> nossa querida Quermesse.</b>
+							<b>
+								Faça parte do nosso clube exclusivo <br /> que oferece vários
+								descontos e muita <br /> facilidade. Além disso, você pode{' '}
+								<br /> ganhar brindes especiais e ainda se <br /> cadastrar como
+								um vendedor na <br /> nossa querida Quermesse.
+							</b>
 						</p>
 					</div>
 
@@ -66,9 +90,16 @@ const Plus: FC = () => {
 						<div className="flex justify-center items-center mb-4">
 							<FaChalkboardTeacher className="w-16 h-16 text-green-500" />
 						</div>
-						<h3 className="text-green-700 text-lg font-semibold mb-2">Consultoria Personalizada</h3>
+						<h3 className="text-green-700 text-lg font-semibold mb-2">
+							Consultoria Personalizada
+						</h3>
 						<p className="text-gray-600">
-							<b>O Plantify+ oferece acesso a <br /> consultores especializados que <br /> podem te ajudar a planejar sua <br /> produção, melhorar suas práticas <br /> agrícolas e até encontrar novas <br /> oportunidades de venda.</b>
+							<b>
+								O Plantify+ oferece acesso a <br /> consultores especializados
+								que <br /> podem te ajudar a planejar sua <br /> produção,
+								melhorar suas práticas <br /> agrícolas e até encontrar novas{' '}
+								<br /> oportunidades de venda.
+							</b>
 						</p>
 					</div>
 				</div>
@@ -105,7 +136,6 @@ const Plus: FC = () => {
 			<div className="relative w-full">
 				{/* Contêiner principal */}
 				<div className="relative flex flex-col md:flex-row justify-center items-center p-6">
-
 					{/* Background cobrindo toda a seção */}
 					<div
 						className="absolute inset-0 w-full h-full z-10"
@@ -119,7 +149,7 @@ const Plus: FC = () => {
 					<div className="md:w-1/2 p-4 relative z-20 flex flex-col items-end justify-center gap-1">
 						<div>
 							<h1 className="text-3xl md:text-5xl font-bold text-orange-500 mb-3 text-left">
-								O Chico  <br />
+								O Chico <br />
 								no Plantify+
 							</h1>
 							<p className="text-black mb-4 text-xs md:text-sm leading-tight text-left">
@@ -131,8 +161,7 @@ const Plus: FC = () => {
 								funcionalidades avançadas da <br />
 								plataforma. Isso inclui alertas <br />
 								proativos e conselhos sobre <br />
-								como melhorar a produtividade <br />
-								e a saúde das plantas.
+								como melhorar a produtividade <br />e a saúde das plantas.
 							</p>
 							<button className="bg-orange-500 text-white py-2 px-5 rounded-lg font-bold transition duration-300 text-lg">
 								Seja Plantify+
@@ -150,8 +179,8 @@ const Plus: FC = () => {
 					</div>
 				</div>
 			</div>
-		</>
-	);
-};
+		</div>
+	)
+}
 
-export default Plus;
+export default Plus

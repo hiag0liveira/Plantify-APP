@@ -50,7 +50,7 @@ const Header: FC = () => {
 				</Link>
 
 				{isAuth ? (
-					<div className="relative space-x-6 ml-auto -mb-20 mr-3 z-10">
+					<div className="relative space-x-6 ml-auto -mb-20 mr-3 z-30">
 						{!isDropdownOpen && (
 							<div className="rounded-b-full bg-white p-2">
 								<IoIosArrowDown
@@ -89,13 +89,19 @@ const Header: FC = () => {
 										<BiSolidLockAlt className="absolute text-lg" />
 									</li>
 									<Link to="/">
-										<li className="flex items-start justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+										<li
+											className="flex items-start justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer"
+											onClick={toggleDropdown}
+										>
 											<IoHomeOutline />
 											Home Page
 										</li>
 									</Link>
 									<Link to="/plus">
-										<li className="flex items-center justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+										<li
+											className="flex items-center justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer"
+											onClick={toggleDropdown}
+										>
 											<FaPlus />
 											Plantify Plus
 										</li>
