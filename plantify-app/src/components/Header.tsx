@@ -63,7 +63,10 @@ const Header: FC = () => {
 							<div className="absolute -left-24 w-48 text-center bg-white shadow-lg rounded-lg z-20">
 								<ul className="text-gray-700">
 									<Link to="/manage">
-										<li className="flex items-start justify-center mt-1 gap-2 py-2 hover:bg-gray-100 cursor-pointer">
+										<li
+											className="flex items-start justify-center mt-1 gap-2 py-2 hover:bg-gray-100 cursor-pointer"
+											onClick={toggleDropdown}
+										>
 											<FaHandHoldingUsd />
 											<span>Minha gestão</span>
 										</li>
