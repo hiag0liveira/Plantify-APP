@@ -7,6 +7,7 @@ import LoginPage from '../pages/Login'
 import SignIn from '../pages/SignIn'
 import Plus from '../pages/Plus'
 import ChatBot from '../pages/ChatBot'
+import Manage from '../pages/Manage'
 
 export const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'chatbot',
 				element: <ChatBot />,
+			},
+			{
+				path: 'manage',
+				element: <Manage />,
 			},
 		],
 	},

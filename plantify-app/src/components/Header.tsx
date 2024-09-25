@@ -62,10 +62,12 @@ const Header: FC = () => {
 						{isDropdownOpen && (
 							<div className="absolute -left-24 w-48 text-center bg-white shadow-lg rounded-lg z-20">
 								<ul className="text-gray-700">
-									<li className="flex items-start justify-center mt-1 gap-2 py-2 hover:bg-gray-100 cursor-pointer">
-										<FaHandHoldingUsd />
-										<span>Minha gestão</span>
-									</li>
+									<Link to="/manage">
+										<li className="flex items-start justify-center mt-1 gap-2 py-2 hover:bg-gray-100 cursor-pointer">
+											<FaHandHoldingUsd />
+											<span>Minha gestão</span>
+										</li>
+									</Link>
 
 									<li className="flex items-start justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-not-allowed ">
 										<div className="blur-[1px] flex items-start justify-center gap-2">

@@ -12,6 +12,9 @@ export default {
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
             },
+            colors: {
+                greenFigman: '#6ebe44',
+            },
         },
     },
     plugins: [
