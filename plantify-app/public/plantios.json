@@ -1,91 +1,91 @@
 [
     {
         "name": "Feijão",
-        "image": "./src/assets/manage/bean.svg",
+        "image": "/plantiosImg/bean.svg",
         "lastEdited": "21/10/24, 18:20",
         "route": "bean"
     },
     {
         "name": "Batata",
-        "image": "/src/assets/manage/potato.svg",
+        "image": "/plantiosImg/potato.svg",
         "lastEdited": "05/09/24, 14:30",
         "route": "potato"
     },
     {
         "name": "Soja",
-        "image": "/src/assets/manage/soy.svg",
+        "image": "/plantiosImg/soy.svg",
         "lastEdited": "10/08/24, 11:30",
         "route": "soy"
     },
     {
         "name": "Milho",
-        "image": "/src/assets/manage/corn.svg",
+        "image": "/plantiosImg/corn.svg",
         "lastEdited": "04/08/24, 12:50",
         "route": "corn"
     },
     {
         "name": "Alface",
-        "image": "/src/assets/manage/lettuce.svg",
+        "image": "/plantiosImg/lettuce.svg",
         "lastEdited": "25/07/24, 07:10",
         "route": "lettuce"
     },
     {
         "name": "Repolho",
-        "image": "/src/assets/manage/cabbage.svg",
+        "image": "/plantiosImg/cabbage.svg",
         "lastEdited": "25/07/24, 07:00",
         "route": "cabbage"
     },
     {
         "name": "Tomate",
-        "image": "/src/assets/manage/tomato.svg",
+        "image": "/plantiosImg/tomato.svg",
         "lastEdited": "24/07/24, 14:22",
         "route": "tomato"
     },
     {
         "name": "Cenoura",
-        "image": "/src/assets/manage/carrot.svg",
+        "image": "/plantiosImg/carrot.svg",
         "lastEdited": "15/06/24, 10:15",
         "route": "carrot"
     },
     {
         "name": "Abóbora",
-        "image": "/src/assets/manage/pumpkin.svg",
+        "image": "/plantiosImg/pumpkin.svg",
         "lastEdited": "12/05/24, 08:45",
         "route": "pumpkin"
     },
     {
         "name": "Pepino",
-        "image": "/src/assets/manage/cucumber.svg",
+        "image": "/plantiosImg/cucumber.svg",
         "lastEdited": "22/04/24, 16:10",
         "route": "cucumber"
     },
     {
         "name": "Cebola",
-        "image": "/src/assets/manage/onion.svg",
+        "image": "/plantiosImg/onion.svg",
         "lastEdited": "02/04/24, 12:30",
         "route": "onion"
     },
     {
         "name": "Pimentão",
-        "image": "/src/assets/manage/bellpepper.svg",
+        "image": "/plantiosImg/bellpepper.svg",
         "lastEdited": "18/03/24, 09:50",
         "route": "bellpepper"
     },
     {
         "name": "Beterraba",
-        "image": "/src/assets/manage/beet.svg",
+        "image": "/plantiosImg/beet.svg",
         "lastEdited": "01/03/24, 14:00",
         "route": "beet"
     },
     {
         "name": "Espinafre",
-        "image": "/src/assets/manage/spinach.svg",
+        "image": "/plantiosImg/spinach.svg",
         "lastEdited": "20/02/24, 07:20",
         "route": "spinach"
     },
     {
         "name": "Brócolis",
-        "image": "/src/assets/manage/broccoli.svg",
+        "image": "/plantiosImg/broccoli.svg",
         "lastEdited": "11/02/24, 18:30",
         "route": "broccoli"
     }
