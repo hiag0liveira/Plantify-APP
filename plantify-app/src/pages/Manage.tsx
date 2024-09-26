@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import imagem1 from '../assets/manage/bgStart.png'
 import chico from '../assets/plantify+/chico.svg'
 import plantios from '../assets/manage/fundomeusplantios-svg.svg'
@@ -12,8 +12,11 @@ import BlogPosts from '../components/BlogPosts'
 import up from '../assets/manage/bsgraphuparrow.svg'
 import down from '../assets/manage/bsgraphdownarrow.svg'
 import money from '../assets/manage/money.png'
+import MyPlantingsModal from '../components/MyPlantingsModal'
 
 const Manage: FC = () => {
+	const [visibleModal, setVisibleModal] = useState<boolean>(false)
+
 	return (
 		<div>
 			<div
@@ -65,7 +68,12 @@ const Manage: FC = () => {
 							<h2 className="text-lg font-bold text-green-600">
 								Meus plantios
 							</h2>
-							<span className="underline text-xs text-green-500">
+							<span
+								className="underline text-xs text-green-500 cursor-pointer hover:text-green-700"
+								onClick={() => {
+									setVisibleModal(true)
+								}}
+							>
 								Acessar painel
 							</span>
 						</div>
@@ -193,6 +201,8 @@ const Manage: FC = () => {
 			<div className="mt-14 mb-24">
 				<BlogPosts />
 			</div>
+
+			{visibleModal && <MyPlantingsModal setVisibleModal={setVisibleModal} />}
 		</div>
 	)
 }

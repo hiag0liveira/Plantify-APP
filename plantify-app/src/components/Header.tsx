@@ -111,10 +111,12 @@ const Header: FC = () => {
 											Plantify Plus
 										</li>
 									</Link>
-									<li className="flex items-center justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
-										<PiPlant />
-										Sobre nós
-									</li>
+									<Link to="/about">
+										<li className="flex items-center justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+											<PiPlant />
+											Sobre nós
+										</li>
+									</Link>
 									<li
 										className="flex items-start justify-center gap-2 py-2 hover:bg-gray-100 rounded-lg cursor-pointer"
 										onClick={toggleDropdown}
