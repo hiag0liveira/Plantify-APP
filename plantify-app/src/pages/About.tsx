@@ -4,8 +4,9 @@ import plantify from '../assets/logos/Plantify LOGO white.svg'
 import missao from '../assets/about/missao.png'
 import visao from '../assets/about/visao.png'
 import valores from '../assets/about/valores.png'
-import galera from '../assets/about/galera.png'
-import { IoCheckmarkCircle } from "react-icons/io5";
+import galera from '../assets/about/galera2.jpg'
+import { IoCheckmarkCircle } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 const About: FC = () => {
 	return (
@@ -27,20 +28,28 @@ const About: FC = () => {
 			{/* Seção do Texto Informativo */}
 			<div className="p-8 bg-greenFigman">
 				<p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed text-center whitespace-normal">
-					A Plantify Soluções é um projeto de empreendedorismo criado por estudantes <br />
-					para ajudar pequenos agricultores a gerenciar suas propriedades de forma <br />
-					eficiente e moderna. O aplicativo oferece monitoramento de safra, previsão <br />
-					climática, controle de insumos e venda de produtos, tudo voltado para <br />
-					dispositivos de baixo custo e com pouca internet. O objetivo é democratizar o <br />
+					A Plantify Soluções é um projeto de empreendedorismo criado por
+					estudantes <br />
+					para ajudar pequenos agricultores a gerenciar suas propriedades de
+					forma <br />
+					eficiente e moderna. O aplicativo oferece monitoramento de safra,
+					previsão <br />
+					climática, controle de insumos e venda de produtos, tudo voltado para{' '}
+					<br />
+					dispositivos de baixo custo e com pouca internet. O objetivo é
+					democratizar o <br />
 					acesso à tecnologia, melhorando a produtividade e promovendo a <br />
 					sustentabilidade entre os agricultores.
 				</p>
 			</div>
-			<div>
-				<div className='flex mt-12 ml-12 mb-12 items-center'>
-					<div className='mr-8 ml-8'>
-						<h1 className='text-orange-500 text-4xl mb-6 font-bold'>Nossa Missão</h1>
-						<p className='text-black text-2xl'>
+
+			<div className="mx-auto max-w-7xl">
+				<div className="flex mt-12 ml-12 mb-12 items-center">
+					<div className="mr-8 ml-8">
+						<h1 className="text-orange-500 text-4xl mb-6 font-bold">
+							Nossa Missão
+						</h1>
+						<p className="text-black text-2xl">
 							Simplificar e otimizar a vida dos <br />
 							pequenos e médios produtores <br />
 							rurais, fornecendo ferramentas <br />
@@ -49,18 +58,20 @@ const About: FC = () => {
 							eficiente, sustentável e lucrativa.
 						</p>
 					</div>
-					<div className='ml-44'>
-						<img src={missao} className='w-auto' />
+					<div className="ml-44">
+						<img src={missao} className="w-auto" />
 					</div>
 				</div>
 
-				<div className='flex mt-12 ml-12 mb-12 items-center'>
-					<div className=''>
-						<img src={visao} className='w-auto' />
+				<div className="flex mt-12 ml-12 mb-12 items-center">
+					<div className="">
+						<img src={visao} className="w-auto" />
 					</div>
-					<div className='ml-48'>
-						<h1 className='text-orange-500 text-4xl mb-6 font-bold text-right'>Nossa Visào</h1>
-						<p className='text-black text-2xl text-right'>
+					<div className="ml-48">
+						<h1 className="text-orange-500 text-4xl mb-6 font-bold text-right">
+							Nossa Visào
+						</h1>
+						<p className="text-black text-2xl text-right">
 							Revolucionar o modo como a <br />
 							agricultura é gerida, tornando a <br />
 							Plantify a referência em tecnologia <br />
@@ -72,37 +83,51 @@ const About: FC = () => {
 					</div>
 				</div>
 
-				<div className='flex mt-12 ml-12 mb-12 items-center'>
-					<div className='mr-8 ml-8'>
-						<h1 className='text-orange-500 text-4xl mb-6 font-bold'>Nossos Valores</h1>
-						<p className='text-black text-2xl flex items-center'>
-							<IoCheckmarkCircle className='mr-2 text-green-500' />  Inovaçào
+				<div className="flex mt-12 ml-12 items-center">
+					<div className="mr-8 ml-8">
+						<h1 className="text-orange-500 text-4xl mb-6 font-bold">
+							Nossos Valores
+						</h1>
+						<p className="text-black text-2xl flex items-center">
+							<IoCheckmarkCircle className="mr-2 text-green-500" /> Inovaçào
 						</p>
-						<p className='text-black text-2xl flex items-center'>
-							<IoCheckmarkCircle className='mr-2 text-green-500' />	Colaboraçào
+						<p className="text-black text-2xl flex items-center">
+							<IoCheckmarkCircle className="mr-2 text-green-500" /> Colaboraçào
 						</p>
-						<p className='text-black text-2xl flex items-center'>
-							<IoCheckmarkCircle className='mr-2 text-green-500' />	transparência
+						<p className="text-black text-2xl flex items-center">
+							<IoCheckmarkCircle className="mr-2 text-green-500" />{' '}
+							transparência
 						</p>
-						<p className='text-black text-2xl flex items-center'>
-							<IoCheckmarkCircle className='mr-2 text-green-500' />	Sustentabilidade
+						<p className="text-black text-2xl flex items-center">
+							<IoCheckmarkCircle className="mr-2 text-green-500" />{' '}
+							Sustentabilidade
 						</p>
-						<p className='text-black text-2xl flex items-center'>
-							<IoCheckmarkCircle className='mr-2 text-green-500' />	Excelência
+						<p className="text-black text-2xl flex items-center">
+							<IoCheckmarkCircle className="mr-2 text-green-500" /> Excelência
 						</p>
 					</div>
-					<div className='ml-64'>
-						<img src={valores} className='w-auto' />
+					<div className="ml-64">
+						<img src={valores} className="w-auto" />
 					</div>
 				</div>
+			</div>
+			<div>
+				<div
+					className="relative h-screen w-screen bg-cover bg-center"
+					style={{
+						backgroundImage: `url(${galera})`,
+						backgroundSize: 'contain', // Muda para 'contain' para evitar cortes na imagem
+						backgroundRepeat: 'no-repeat', // Evita que a imagem se repita
+						backgroundPosition: 'center', // Centraliza a imagem
+					}}
+				></div>
 
-				<div>
-					<img src={galera} />
-				</div>
-				<div className='flex justify-center mt-10 mb-10'>
-					<button className='bg-white border border-orange-500 text-orange-500 border-4 py-3 px-6 text-3xl font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300'>
-						Seja um parceiro Plantify
-					</button>
+				<div className="flex justify-center mb-10">
+					<Link to="/plus">
+						<button className="bg-white border-orange-500 text-orange-500 border-4 py-3 px-6 text-3xl font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300">
+							Seja um parceiro Plantify
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

@@ -88,7 +88,7 @@ const Manage: FC = () => {
 									<span className="text-gray-500 text-end">
 										Última edição: <br></br> 21/10/24, 18:20
 									</span>
-									<img className="h-6 w-4" src={arrow} />
+									<img className="h-4 w-4" src={arrow} />
 								</div>
 							</li>
 							<li className="flex justify-between items-center shadow h-12 rounded-lg w-full p-4">
@@ -100,7 +100,7 @@ const Manage: FC = () => {
 									<span className="text-gray-500 text-end">
 										Última edição: <br></br> 05/09/24, 14:30
 									</span>
-									<img className="h-6 w-4" src={arrow} />
+									<img className="h-4 w-4" src={arrow} />
 								</div>
 							</li>
 						</ul>
@@ -113,10 +113,12 @@ const Manage: FC = () => {
 								backgroundImage: `url(${forum})`,
 							}}
 						>
-							<h2 className="text-3xl font-bold text-green-700">Fórum</h2>
-							<div className="flex gap-2 items-center">
+							<h2 className="text-3xl font-semibold mb-6 text-green-700">
+								Fórum
+							</h2>
+							<div className="flex gap-2 mb-6 items-center">
 								<p className="text-sm text-gray-500">🔥 7 novas postagens</p>
-								<img className="h-6 w-4" src={arrow} />
+								<img className="h-4 w-4" src={arrow} />
 							</div>
 						</div>
 						<div
@@ -125,12 +127,14 @@ const Manage: FC = () => {
 								backgroundImage: `url(${plantios})`,
 							}}
 						>
-							<h2 className="text-3xl font-bold text-green-700">Quermesse</h2>
-							<div className="flex gap-2 items-center">
+							<h2 className="text-3xl font-bold mb-6 text-green-700">
+								Quermesse
+							</h2>
+							<div className="flex gap-2 mb-6 items-center">
 								<p className="text-sm text-end text-gray-500">
-									🛒 3 novos produtos <br></br> cadastrados hojes
+									🛒 3 novos produtos <br></br> cadastrados hoje
 								</p>
-								<img className="h-6 w-4" src={arrow} />
+								<img className="h-4 w-4" src={arrow} />
 							</div>
 						</div>
 					</div>

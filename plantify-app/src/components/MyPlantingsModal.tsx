@@ -98,7 +98,7 @@ const MyPlantingsModal: FC<IMyPlantingsModal> = ({ setVisibleModal }) => {
 									<span className="text-gray-500 text-end">
 										Última edição: <br /> {plantio.lastEdited}
 									</span>
-									<img className="h-6 w-4" src={arrow} />
+									<img className="h-4 w-4" src={arrow} />
 								</div>
 							</li>
 						))}
@@ -123,7 +123,7 @@ const MyPlantingsModal: FC<IMyPlantingsModal> = ({ setVisibleModal }) => {
 									<span className="text-gray-500 text-end">
 										Última edição: <br /> {plantio.lastEdited}
 									</span>
-									<img className="h-6 w-4" src={arrow} />
+									<img className="h-4 w-4" src={arrow} />
 								</div>
 							</li>
 						))}
