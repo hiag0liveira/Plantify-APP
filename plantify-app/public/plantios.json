@@ -1,7 +1,7 @@
 [
     {
         "name": "Feijão",
-        "image": "/src/assets/manage/bean.svg",
+        "image": "./src/assets/manage/bean.svg",
         "lastEdited": "21/10/24, 18:20",
         "route": "bean"
     },
