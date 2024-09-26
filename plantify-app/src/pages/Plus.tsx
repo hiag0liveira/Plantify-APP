@@ -152,7 +152,7 @@ const Plus: FC = () => {
 								O Chico <br />
 								no Plantify+
 							</h1>
-							<p className="text-black mb-4 text-xs md:text-sm leading-tight text-left">
+							<p className="text-black mb-4 text-xs md:text-sm leading-snug text-left">
 								No Plantify+, o nosso assistente <br />
 								virtual Chico oferece um <br />
 								suporte ainda mais avançado e <br />
