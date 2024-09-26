@@ -7,6 +7,9 @@ import LoginPage from '../pages/Login'
 import SignIn from '../pages/SignIn'
 import Plus from '../pages/Plus'
 import ChatBot from '../pages/ChatBot'
+import Manage from '../pages/Manage'
+import PlantingPage from '../pages/PlantingPage'
+import About from '../pages/About'
 
 export const router = createBrowserRouter([
 	{
@@ -31,12 +34,24 @@ export const router = createBrowserRouter([
 				element: <SignIn />,
 			},
 			{
+				path: 'about',
+				element: <About />,
+			},
+			{
 				path: 'plus',
 				element: <Plus />,
 			},
 			{
 				path: 'chatbot',
 				element: <ChatBot />,
+			},
+			{
+				path: 'manage',
+				element: <Manage />,
+			},
+			{
+				path: 'manage/:planting',
+				element: <PlantingPage />,
 			},
 		],
 	},

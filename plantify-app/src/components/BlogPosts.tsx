@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const BlogPosts: FC = () => {
 	return (
-		<div className="container mx-auto max-w-7xl">
+		<div className=" mx-auto max-w-6xl">
 			<h2 className="text-3xl font-bold text-green-700 mb-8">
 				Últimas postagens no blog
 			</h2>
