@@ -20,7 +20,7 @@ const Manage: FC = () => {
 	return (
 		<div>
 			<div
-				className="relative w-full bg-cover bg-center bg-no-repeat"
+				className="relative -mt-1 w-full bg-cover bg-center bg-no-repeat"
 				style={{
 					backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),url(${imagem1})`,
 				}}
@@ -157,7 +157,6 @@ const Manage: FC = () => {
 						<a
 							href="https://www.climatempo.com.br/previsao-do-tempo/15-dias/cidade/4953/camposdosgoytacazes-rj"
 							target="_blank"
-							rel="noopener noreferrer"
 						>
 							<img src={tempo} alt="" />
 						</a>
