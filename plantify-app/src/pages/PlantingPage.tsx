@@ -9,6 +9,13 @@ import tempo from '../assets/platingIndStatic/previsaodotempo.png'
 import chico from '../assets/plantify+/chico.svg'
 import PlantingProgress from '../components/PlantingProgress'
 import SoilHumidityChart from '../components/SoilHumidityChart'
+import armazenamento from '../assets/platingIndStatic/fundoarmaze-svg.svg'
+import transporte from '../assets/platingIndStatic/fundotransporte-svg.svg'
+import duba from '../assets/platingIndStatic/fundoaduba-svg.svg'
+import controle from '../assets/platingIndStatic/fundocontrole-svg.svg'
+import equipe from '../assets/platingIndStatic/fundoequipe-svg.svg'
+import fluxo from '../assets/platingIndStatic/fundofluxo-svg.svg'
+import irrigacao from '../assets/platingIndStatic/fundoirriga-svg.svg'
 
 const PlantingPage = () => {
 	const { planting } = useParams<{ planting: string }>()
@@ -78,7 +85,12 @@ const PlantingPage = () => {
 								<p>Desculpe, não encontramos informações para esse plantio.</p>
 							)}
 
-							<div className="bg-white mt-24 p-10 rounded-lg shadow">
+							<div
+								className="bg-white mt-24 p-10 rounded-lg shadow bg-cover bg-center bg-no-repeat"
+								style={{
+									backgroundImage: `url(${fluxo})`,
+								}}
+							>
 								<div className="flex items-center -mt-6 -mx-4 justify-between">
 									<h2 className="text-base font-bold text-green-600">
 										Fluxo de caixa
@@ -130,15 +142,21 @@ const PlantingPage = () => {
 							)}{' '}
 							<div className="flex flex-col items-center">
 								<div
-									className="bg-white text-gray-500 text-base mt-10 p-4 rounded-lg shadow  flex items-start justify-between w-72"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 text-base mt-10 p-4 rounded-lg shadow  flex items-start justify-between w-72 bg-cover bg-center bg-no-repeat"
+									style={{
+										height: '5.5rem',
+										backgroundImage: `url(${armazenamento})`,
+									}}
 								>
 									<h1 className="font-bold"> Armazenamento</h1>
 									<img className="h-4 w-4" src={arrow} />
 								</div>
 								<div
-									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg  shadow flex items-start justify-between w-72"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg  shadow flex items-start justify-between w-72 bg-cover bg-center bg-no-repeat"
+									style={{
+										height: '5.5rem',
+										backgroundImage: `url(${transporte})`,
+									}}
 								>
 									<h1 className="font-bold"> Transporte</h1>
 									<img className="h-4 w-4" src={arrow} />
@@ -148,22 +166,28 @@ const PlantingPage = () => {
 						<div className="col-span-1">
 							<div className="flex flex-col items-center">
 								<div
-									className="bg-white text-gray-500 mt-2 text-base p-4 rounded-lg shadow flex items-start justify-between w-72 h-16"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 mt-2 text-base p-4 rounded-lg shadow flex items-start justify-between w-72 h-16 bg-cover bg-center bg-no-repeat"
+									style={{
+										height: '5.5rem',
+										backgroundImage: `url(${irrigacao})`,
+									}}
 								>
 									<h1 className="font-bold"> Irrigação</h1>
 									<img className="h-4 w-4" src={arrow} />
 								</div>
 								<div
-									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg shadow flex items-start justify-between w-72"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg shadow flex items-start justify-between w-72  bg-cover bg-center bg-no-repeat"
+									style={{ height: '5.5rem', backgroundImage: `url(${duba})` }}
 								>
 									<h1 className="font-bold"> Adubação</h1>
 									<img className="h-4 w-4" src={arrow} />
 								</div>
 								<div
-									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg shadow flex items-start justify-between w-72"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 text-base mt-3 p-4 rounded-lg shadow flex items-start justify-between w-72 bg-cover bg-center bg-no-repeat"
+									style={{
+										height: '5.5rem',
+										backgroundImage: `url(${controle})`,
+									}}
 								>
 									<h1 className=" font-bold "> Controle de pragas</h1>
 									<img className="h-4 w-4" src={arrow} />
@@ -171,8 +195,11 @@ const PlantingPage = () => {
 							</div>
 							<div className="flex flex-col items-center">
 								<div
-									className="bg-white text-gray-500 text-base mt-10 p-4 rounded-lg shadow  flex items-start justify-between w-72"
-									style={{ height: '5.5rem' }}
+									className="bg-white text-gray-500 text-base mt-10 p-4 rounded-lg shadow flex items-start justify-between w-72 bg-cover bg-center bg-no-repeat"
+									style={{
+										height: '5.5rem',
+										backgroundImage: `url(${equipe})`,
+									}}
 								>
 									<h1 className="font-bold"> Equipe</h1>
 									<img className="h-4 w-4" src={arrow} />
