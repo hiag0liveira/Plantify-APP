@@ -10,16 +10,30 @@ import { RiDoubleQuotesL } from 'react-icons/ri'
 import BlogPosts from '../components/BlogPosts'
 import { useInView } from 'react-intersection-observer'
 import './animation.css'
+import { useNavigate } from 'react-router-dom'
 
 const Home: FC = () => {
 	const { ref: advantagesRef, inView: advantagesVisible } = useInView({
 		triggerOnce: true,
-		threshold: 0.1, // Animação acontece quando 10% do elemento está visível
+		threshold: 0.1,
 	})
 	const { ref: resultsRef, inView: resultsVisible } = useInView({
 		triggerOnce: true,
 		threshold: 0.1,
 	})
+
+	const navigate = useNavigate()
+
+	const handleClick = () => {
+		navigate('/plus')
+		window.scrollTo(0, 0)
+	}
+
+	const handleClickAbout = () => {
+		navigate('/about')
+		window.scrollTo(0, 0)
+	}
+
 	return (
 		<div>
 			<div
@@ -37,7 +51,10 @@ const Home: FC = () => {
 							SUA GESTÃO{' '}
 							<span className="font-semibold italic">FACILITADA</span>
 						</h4>
-						<button className="mt-6 px-6 py-2 bg-orange-500 text-white text-lg rounded-md hover:bg-orange-600 transition duration-300">
+						<button
+							className="mt-6 px-6 py-2 bg-orange-500 text-white text-lg rounded-md hover:bg-orange-600 transition duration-300"
+							onClick={handleClickAbout}
+						>
 							Saiba mais
 						</button>
 					</div>
@@ -164,7 +181,10 @@ const Home: FC = () => {
 						</div>
 						<div></div>
 						<div className="flex flex-col items-start ">
-							<button className=" px-4 py-1 ml-44 bg-orange-500 text-white text-lg rounded-md hover:bg-orange-600 transition duration-300">
+							<button
+								className=" px-4 py-1 ml-44 bg-orange-500 text-white text-lg rounded-md hover:bg-orange-600 transition duration-300"
+								onClick={handleClick}
+							>
 								Seja Plantify+
 							</button>
 						</div>
@@ -226,7 +246,10 @@ const Home: FC = () => {
 						</p>
 					</div>
 				</div>
-				<button className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white text-xl font-bold py-3 px-8 rounded mt-8">
+				<button
+					className="bg-white border border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white text-xl font-bold py-3 px-8 rounded mt-8"
+					onClick={handleClick}
+				>
 					Seja um parceiro Plantify
 				</button>
 			</div>

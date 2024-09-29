@@ -1,5 +1,5 @@
 import { MdKeyboardArrowRight } from 'react-icons/md'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import plantingsData from '../../public/plantios.json'
 import imagem1 from '../assets/manage/bgStart.png'
 import down from '../assets/manage/bsgraphdownarrow.svg'
@@ -21,6 +21,8 @@ const PlantingPage = () => {
 	const { planting } = useParams<{ planting: string }>()
 
 	const plantingData = plantingsData.find((item) => item.route === planting)
+
+	const navigate = useNavigate()
 
 	return (
 		<div>
@@ -68,7 +70,10 @@ const PlantingPage = () => {
 				<div className=" bg-white p-5 pb-10 rounded-lg shadow-2xl mb-16 relative w-full">
 					<div>
 						<h1 className="text-2xl font-semibold text-green-700 mb-4 flex items-center">
-							Meus plantios <MdKeyboardArrowRight />
+							<span onClick={() => navigate(-1)} className="cursor-pointer">
+								Meus plantios
+							</span>
+							<MdKeyboardArrowRight />
 							{plantingData ? plantingData.name : 'Plantio Desconhecido'}
 							<img
 								src={plantingData?.image}

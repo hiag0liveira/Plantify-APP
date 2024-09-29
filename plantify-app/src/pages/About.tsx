@@ -6,12 +6,18 @@ import visao from '../assets/about/visao.png'
 import valores from '../assets/about/valores.png'
 import galera from '../assets/about/galera2.jpg'
 import { IoCheckmarkCircle } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const About: FC = () => {
+	const navigate = useNavigate()
+
+	const handleClick = () => {
+		navigate('/plus')
+		window.scrollTo(0, 0)
+	}
+
 	return (
 		<div className="relative w-full h-auto text-white">
-			{/* Seção da Imagem com Título */}
 			<div
 				className="relative bg-cover bg-center h-64 sm:h-80 md:h-96"
 				style={{ backgroundImage: `url(${fundo})` }}
@@ -25,7 +31,6 @@ const About: FC = () => {
 				</div>
 			</div>
 
-			{/* Seção do Texto Informativo */}
 			<div className="p-8 bg-greenFigman">
 				<p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed text-center whitespace-normal">
 					A Plantify Soluções é um projeto de empreendedorismo criado por
@@ -116,18 +121,19 @@ const About: FC = () => {
 					className="relative h-screen w-screen bg-cover bg-center"
 					style={{
 						backgroundImage: `url(${galera})`,
-						backgroundSize: 'contain', // Muda para 'contain' para evitar cortes na imagem
-						backgroundRepeat: 'no-repeat', // Evita que a imagem se repita
-						backgroundPosition: 'center', // Centraliza a imagem
+						backgroundSize: 'contain',
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center',
 					}}
 				></div>
 
 				<div className="flex justify-center mb-10">
-					<Link to="/plus">
-						<button className="bg-white border-orange-500 text-orange-500 border-4 py-3 px-6 text-3xl font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300">
-							Seja um parceiro Plantify
-						</button>
-					</Link>
+					<button
+						className="bg-white border-orange-500 text-orange-500 border-4 py-3 px-6 text-3xl font-bold rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300"
+						onClick={handleClick}
+					>
+						Seja um parceiro Plantify
+					</button>
 				</div>
 			</div>
 		</div>

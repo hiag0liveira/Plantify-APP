@@ -1,21 +1,23 @@
 import { FC, useState } from 'react'
-import imagem1 from '../assets/manage/bgStart.png'
-import chico from '../assets/plantify+/chico.svg'
-import plantios from '../assets/manage/fundomeusplantios-svg.svg'
+import { useNavigate } from 'react-router-dom'
 import arrow from '../assets/manage/arrow.svg'
 import bean from '../assets/manage/bean.svg'
-import potato from '../assets/manage/potato.svg'
-import forum from '../assets/manage/forum-svg.svg'
-import Agenda from '../components/Agenda'
-import tempo from '../assets/manage/previsaodotempo.png'
-import BlogPosts from '../components/BlogPosts'
-import up from '../assets/manage/bsgraphuparrow.svg'
+import imagem1 from '../assets/manage/bgStart.png'
 import down from '../assets/manage/bsgraphdownarrow.svg'
+import up from '../assets/manage/bsgraphuparrow.svg'
+import forum from '../assets/manage/forum-svg.svg'
+import plantios from '../assets/manage/fundomeusplantios-svg.svg'
 import money from '../assets/manage/money.png'
+import potato from '../assets/manage/potato.svg'
+import tempo from '../assets/manage/previsaodotempo.png'
+import chico from '../assets/plantify+/chico.svg'
+import Agenda from '../components/Agenda'
+import BlogPosts from '../components/BlogPosts'
 import MyPlantingsModal from '../components/MyPlantingsModal'
 
 const Manage: FC = () => {
 	const [visibleModal, setVisibleModal] = useState<boolean>(false)
+	const navigate = useNavigate()
 
 	return (
 		<div>
@@ -79,7 +81,10 @@ const Manage: FC = () => {
 						</div>
 
 						<ul className="mt-4 space-y-4">
-							<li className="flex justify-between items-center shadow h-12 rounded-lg w-full p-4">
+							<li
+								className="flex justify-between items-center shadow h-12 rounded-lg w-full p-4 cursor-pointer"
+								onClick={() => navigate('/manage/bean')}
+							>
 								<div className="flex gap-2 items-center">
 									<img className="h-4 w-4" src={bean} alt="bean" />
 									Feijão
@@ -91,7 +96,11 @@ const Manage: FC = () => {
 									<img className="h-4 w-4" src={arrow} />
 								</div>
 							</li>
-							<li className="flex justify-between items-center shadow h-12 rounded-lg w-full p-4">
+
+							<li
+								className="flex justify-between items-center shadow h-12 rounded-lg w-full p-4 cursor-pointer"
+								onClick={() => navigate('/manage/potato')}
+							>
 								<div className="flex gap-2 items-center">
 									<img className="h-4 w-4" src={potato} alt="potato" />
 									Batata
