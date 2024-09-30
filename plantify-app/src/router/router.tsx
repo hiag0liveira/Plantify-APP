@@ -10,6 +10,7 @@ import ChatBot from '../pages/ChatBot'
 import Manage from '../pages/Manage'
 import PlantingPage from '../pages/PlantingPage'
 import About from '../pages/About'
+import Quermesse from '../pages/Quermesse'
 
 export const router = createBrowserRouter([
 	{
@@ -54,5 +55,10 @@ export const router = createBrowserRouter([
 				element: <PlantingPage />,
 			},
 		],
+	},
+	{
+		path: 'quermesse',
+		element: <Quermesse />,
+		errorElement: <ErrorPage />,
 	},
 ])

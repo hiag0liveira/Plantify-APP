@@ -28,7 +28,7 @@ function LoginPage() {
 				setTokenToLocalStorage('token', data.token)
 				dispatch(login(data))
 				toast.success('You logged id.')
-				navigate('/')
+				navigate('/manage')
 				window.location.reload()
 			}
 		} catch (err: any) {
@@ -71,19 +71,16 @@ function LoginPage() {
 				backgroundPosition: 'center',
 			}}
 		>
-			{/* Coluna da esquerda (Logo P centralizado) */}
 			<div className="hidden md:flex justify-center items-center">
 				<img src={plantifyLogoP} alt="Logo" className="w-80" />
 			</div>
 
-			{/* Coluna da direita (Formulário centralizado) */}
 			<div className="flex justify-center items-center px-4 py-6">
 				<div className="bg-white bg-opacity-70 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-xl">
 					<div className="flex text-2xl md:text-4xl justify-center text-green-700 text-center mb-6">
 						<img src={platifyLogo} alt="Logo" className="w-48 md:w-64" />
 					</div>
 					<form onSubmit={handleSubmit}>
-						{/* E-mail input */}
 						<div className="mb-4">
 							<label className="block text-sm font-medium text-gray-700">
 								<b>E-mail</b>
@@ -100,7 +97,6 @@ function LoginPage() {
 							)}
 						</div>
 
-						{/* Senha input */}
 						<div className="mb-4">
 							<label className="block text-sm font-medium text-gray-700">
 								<b>Senha</b>
@@ -117,14 +113,12 @@ function LoginPage() {
 							)}
 						</div>
 
-						{/* Esqueceu a senha */}
 						<div className="text-right mb-6">
 							<a href="#" className="text-sm text-green-600 hover:underline">
 								Esqueci minha senha
 							</a>
 						</div>
 
-						{/* Botões */}
 						<div>
 							<button
 								type="submit"

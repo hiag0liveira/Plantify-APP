@@ -1,0 +1,114 @@
+[
+    {
+        "img": "/quermesseImg/açucar.png",
+        "Nome": "Açúcar demerara"
+    },
+    {
+        "img": "/quermesseImg/arroz.png",
+        "Nome": "Arroz 7 grãos"
+    },
+    {
+        "img": "/quermesseImg/banana.jpg",
+        "Nome": "Banana"
+    },
+    {
+        "img": "/quermesseImg/cana.png",
+        "Nome": "Cana-de-açúcar"
+    },
+    {
+        "img": "/quermesseImg/cenoura.png",
+        "Nome": "Cenouras frescas"
+    },
+    {
+        "img": "/quermesseImg/pepper.jpg",
+        "Nome": "Pimenta"
+    },
+    {
+        "img": "/quermesseImg/feijao.png",
+        "Nome": "Feijão branco"
+    },
+    {
+        "img": "/quermesseImg/apple.jpg",
+        "Nome": "Maçã"
+    },
+    {
+        "img": "/quermesseImg/mandioca.png",
+        "Nome": "Mandioca"
+    },
+    {
+        "img": "/quermesseImg/melancia.png",
+        "Nome": "Melancia"
+    },
+    {
+        "img": "/quermesseImg/milho.png",
+        "Nome": "Milhos"
+    },
+    {
+        "img": "/quermesseImg/quiabo.png",
+        "Nome": "Quiabos verdinhos"
+    },
+    {
+        "img": "/quermesseImg/sementeabobora.png",
+        "Nome": "Semente de Abóbora"
+    },
+    {
+        "img": "/quermesseImg/sementemelancia.png",
+        "Nome": "Semente de Melancia"
+    },
+    {
+        "img": "/quermesseImg/uva.png",
+        "Nome": "Uvas tipo Thompson"
+    },
+    {
+        "img": "/quermesseImg/strawberry.jfif",
+        "Nome": "Morango"
+    },
+    {
+        "img": "/quermesseImg/quinoa.jfif",
+        "Nome": "Semente de Quinoa"
+    },
+    {
+        "img": "/quermesseImg/pear.jpg",
+        "Nome": "Pera"
+    },
+    {
+        "img": "/quermesseImg/maraca.jfif",
+        "Nome": "Semente de Maracujá"
+    },
+    {
+        "img": "/quermesseImg/pepino.jfif",
+        "Nome": "Pepino"
+    },
+    {
+        "img": "/quermesseImg/Pequi.jpeg",
+        "Nome": "Pequi"
+    },
+    {
+        "img": "/quermesseImg/abaca.jpg",
+        "Nome": "Coroa de Abaxi"
+    },
+    {
+        "img": "/quermesseImg/laranja.jfif",
+        "Nome": "Mudas de Laranjeira"
+    },
+    {
+        "img": "/quermesseImg/cevada.png",
+        "Nome": "Semente de Cevada"
+    },
+    {
+        "img": "/quermesseImg/brocolis.jpg",
+        "Nome": "Brócolis"
+    },
+    {
+        "img": "/quermesseImg/rabanete.jpg",
+        "Nome": "Rabanete"
+    },
+    {
+        "img": "/quermesseImg/abacate.jfif",
+        "Nome": "Abacate"
+    },
+    {
+        "img": "/quermesseImg/pessego.jpg",
+        "Nome": "Pêssego"
+    }
+]

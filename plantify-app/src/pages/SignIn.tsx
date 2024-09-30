@@ -51,12 +51,10 @@ function SignIn() {
 				backgroundPosition: 'center',
 			}}
 		>
-			{/* Coluna da esquerda (Logo P centralizado) */}
 			<div className="hidden md:flex justify-center items-center">
 				<img src={plantifyLogoP} alt="Logo" />
 			</div>
 
-			{/* Coluna da direita (Formulário centralizado) */}
 			<div className="flex justify-center items-center px-4 py-6">
 				<div className="bg-white bg-opacity-70 p-6 md:p-4 rounded-lg shadow-lg w-full max-w-md">
 					<div className="text-2xl md:text-4xl font-bold text-green-700 text-center mb-4">
@@ -145,7 +143,6 @@ function SignIn() {
 							/>
 						</div>
 
-						{/* Botões */}
 						<div className="text-center mt-4">
 							<button className="w-full bg-gray-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 hover:bg-orange-500">
 								Criar Conta
