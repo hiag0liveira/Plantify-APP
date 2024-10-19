@@ -11,6 +11,7 @@ import Manage from '../pages/Manage'
 import PlantingPage from '../pages/PlantingPage'
 import About from '../pages/About'
 import Quermesse from '../pages/Quermesse'
+import Forum from '../pages/Forum'
 
 export const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'about',
 				element: <About />,
+			},
+			{
+				path: 'forum',
+				element: <Forum />,
 			},
 			{
 				path: 'plus',

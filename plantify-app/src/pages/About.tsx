@@ -37,7 +37,7 @@ const About: FC = () => {
 					estudantes <br />
 					para ajudar pequenos agricultores a gerenciar suas propriedades de
 					forma <br />
-					eficiente e moderna. O aplicativo oferece monitoramento de safra,
+					eficiente e moderna. O site oferece monitoramento de safra,
 					previsão <br />
 					climática, controle de insumos e venda de produtos, tudo voltado para{' '}
 					<br />
@@ -58,7 +58,7 @@ const About: FC = () => {
 							Simplificar e otimizar a vida dos <br />
 							pequenos e médios produtores <br />
 							rurais, fornecendo ferramentas <br />
-							tecnológicas que tomam a gestão <br />
+							tecnológicas que tornam a gestão <br />
 							da produção agrícola mais <br />
 							eficiente, sustentável e lucrativa.
 						</p>
@@ -74,7 +74,7 @@ const About: FC = () => {
 					</div>
 					<div className="ml-48">
 						<h1 className="text-orange-500 text-4xl mb-6 font-bold text-right">
-							Nossa Visào
+							Nossa Visão
 						</h1>
 						<p className="text-black text-2xl text-right">
 							Revolucionar o modo como a <br />
@@ -82,8 +82,8 @@ const About: FC = () => {
 							Plantify a referência em tecnologia <br />
 							e sustentabilidade, permitindo que <br />
 							os produtores melhorem suas <br />
-							colheitas e contruam uma rede <br />
-							de colaboracao ativa.
+							colheitas e construam uma rede <br />
+							de colaboração ativa.
 						</p>
 					</div>
 				</div>
@@ -94,10 +94,10 @@ const About: FC = () => {
 							Nossos Valores
 						</h1>
 						<p className="text-black text-2xl flex items-center">
-							<IoCheckmarkCircle className="mr-2 text-green-500" /> Inovaçào
+							<IoCheckmarkCircle className="mr-2 text-green-500" /> Inovação
 						</p>
 						<p className="text-black text-2xl flex items-center">
-							<IoCheckmarkCircle className="mr-2 text-green-500" /> Colaboraçào
+							<IoCheckmarkCircle className="mr-2 text-green-500" /> Colaboração
 						</p>
 						<p className="text-black text-2xl flex items-center">
 							<IoCheckmarkCircle className="mr-2 text-green-500" />{' '}
