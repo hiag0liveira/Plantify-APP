@@ -40,7 +40,6 @@ const Header: FC = () => {
 	return (
 		<header className="bg-white border-b-2 border-gray-200 p-4">
 			<div className=" flex items-center container mx-auto max-w-7xl">
-				{/* Logo */}
 				<Link to="/" className="flex-shrink-0">
 					<img
 						src={logo}

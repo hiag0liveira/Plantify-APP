@@ -152,7 +152,6 @@ const Manage: FC = () => {
 				</div>
 			</div>
 
-			{/* Calendar Section */}
 			<div className="bg-white p-4 mt-10 ">
 				<div className="max-w-6xl mx-auto shadow rounded-lg">
 					<h1 className="text-start text-2xl font-bold ml-5 text-green-600">

@@ -43,7 +43,6 @@ const Home: FC = () => {
 				}}
 			>
 				<div className="max-w-7xl">
-					{/* Texto e botão sobrepostos */}
 					<div className="inset-0 flex flex-col justify-center items-start absolute md:pt-36 md:pl-16">
 						<h4 className="text-white text-4xl md:text-5xl font-light leading-tight">
 							SUA LAVOURA <span className="font-semibold italic">DIGITAL</span>
@@ -158,19 +157,16 @@ const Home: FC = () => {
 								<h3 className="text-xl text-white">Gestão de Lavoura</h3>
 							</div>
 
-							{/* Assistente Virtual */}
 							<div className="flex items-center space-x-4">
 								<div className="w-1 h-1 rounded-full bg-white"></div>
 								<h3 className="text-xl text-white">Assistente Virtual</h3>
 							</div>
 
-							{/* Clube de Benefícios */}
 							<div className="flex items-center space-x-4">
 								<div className="w-1 h-1 rounded-full bg-white"></div>
 								<h3 className="text-xl text-white">Clube de Benefícios</h3>
 							</div>
 
-							{/* Consultorias */}
 							<div className="flex items-center space-x-4">
 								<div className="w-1 h-1 rounded-full bg-white"></div>
 								<h3 className="text-xl  text-white">Consultorias</h3>
