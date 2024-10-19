@@ -79,9 +79,9 @@ const ChatBot: FC = () => {
 	}
 
 	return (
-		<div className="grid grid-cols-6">
-			<div className="col-span-2 bg-green-900 p-4"></div>
-			<div className="col-span-4 bg-green-800 h-screen flex flex-col justify-between items-center">
+		<div className="grid grid-cols-6 h-screen -mb-11 bg-green-700">
+			<div className="col-span-2 bg-green-900 h-4/5 p-4"></div>
+			<div className="col-span-4 bg-green-800 h-4/5 flex flex-col justify-between items-center">
 				<div className="h-screen overflow-y-scroll w-full p-4">
 					{messages.map((message, index) => (
 						<div
