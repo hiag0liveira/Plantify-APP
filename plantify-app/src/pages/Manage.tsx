@@ -52,9 +52,11 @@ const Manage: FC = () => {
 								</p>
 							</div>
 							<div>
-								<button className="bg-orange-500 text-white py-1 px-4 rounded-lg hover:bg-orange-600">
-									Falar com o Chico
-								</button>
+								<Link to="/chatbot">
+									<button className="bg-orange-500 text-white py-1 px-4 rounded-lg hover:bg-orange-600">
+										Falar com o Chico
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -116,20 +118,22 @@ const Manage: FC = () => {
 					</div>
 
 					<div className="col-span-4 grid grid-cols-1 gap-4">
-						<div
-							className=" bg-white p-4 rounded-lg shadow flex items-center justify-between w-full bg-cover bg-center bg-no-repeat"
-							style={{
-								backgroundImage: `url(${forum})`,
-							}}
-						>
-							<h2 className="text-3xl font-semibold mb-6 text-green-700">
-								Fórum
-							</h2>
-							<div className="flex gap-2 mb-6 items-center">
-								<p className="text-sm text-gray-500">🔥 7 novas postagens</p>
-								<img className="h-4 w-4" src={arrow} />
+						<Link to="/forum">
+							<div
+								className=" bg-white p-4 rounded-lg shadow flex items-center justify-between w-full bg-cover bg-center bg-no-repeat"
+								style={{
+									backgroundImage: `url(${forum})`,
+								}}
+							>
+								<h2 className="text-3xl font-semibold mb-6 text-green-700">
+									Fórum
+								</h2>
+								<div className="flex gap-2 mb-6 items-center">
+									<p className="text-sm text-gray-500">🔥 7 novas postagens</p>
+									<img className="h-4 w-4" src={arrow} />
+								</div>
 							</div>
-						</div>
+						</Link>
 						<Link to="/quermesse">
 							<div
 								className=" bg-white p-4 rounded-lg shadow flex items-center justify-between w-full bg-cover bg-center bg-no-repeat"
