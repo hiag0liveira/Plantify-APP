@@ -1,8 +1,9 @@
 import { FC, useState } from 'react'
 import axios from 'axios'
 import imgPerf from '../assets/perf.jpg'
+import ilustration from '../assets/chatbot/ilustra.svg'
 import chico from '../assets/plantify+/chico.svg'
-import { BsArrowUpCircleFill } from 'react-icons/bs'
+import { BsArrowUpCircleFill, BsThreeDots } from 'react-icons/bs'
 
 const ChatBot: FC = () => {
 	const [messages, setMessages] = useState<{ role: string; content: string }[]>(
@@ -80,7 +81,37 @@ const ChatBot: FC = () => {
 
 	return (
 		<div className="grid grid-cols-6 h-screen -mb-11 bg-green-700">
-			<div className="col-span-2 bg-green-900 h-4/5 p-4"></div>
+			<div className="col-span-2 bg-green-900 h-4/5 p-6 text-white flex flex-col justify-between">
+				<div>
+					<div className="flex justify-between">
+						<h2 className="font-bold text-xl">Histórico</h2>
+						<BsThreeDots size={30} />
+					</div>
+
+					<hr />
+					<div className="mb-4 mt-8">
+						<p className="font-semibold">Ontem</p>
+						<p>Melhor pesticida caseiro</p>
+					</div>
+
+					<div className="mb-4">
+						<p className="font-semibold">18/10/24</p>
+						<p>Plantar cenoura e batata junto é bom?</p>
+						<p>Boa tarde chico</p>
+					</div>
+
+					<div>
+						<p className="font-semibold">14/10/24</p>
+						<p>Oi chico bom dia</p>
+						<p>Chico como posso vender melancia sem estragar</p>
+					</div>
+				</div>
+
+				<div className="flex justify-center mt-4">
+					<img src={ilustration} alt="Ilustração" className="w-full" />
+				</div>
+			</div>
+
 			<div className="col-span-4 bg-green-800 h-4/5 flex flex-col justify-between items-center">
 				<div className="h-screen overflow-y-scroll w-full p-4">
 					{messages.map((message, index) => (
